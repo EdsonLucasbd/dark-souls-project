@@ -2,14 +2,8 @@
 
 import { cn } from "@/lib/utils";
 import type { Game } from "@/src/schemas/schema";
+import { useTranslations } from "next-intl";
 import { Button } from "../ui/button";
-
-const GAMES: { id: Game | "all"; label: string; short: string }[] = [
-  { id: "all", label: "All Games", short: "ALL" },
-  { id: "ds1", label: "Dark Souls", short: "DS I" },
-  { id: "ds2", label: "Dark Souls II", short: "DS II" },
-  { id: "ds3", label: "Dark Souls III", short: "DS III" },
-];
 
 interface GameSelectorProps {
   value: Game | "all";
@@ -17,9 +11,18 @@ interface GameSelectorProps {
 }
 
 export function GameSelector({ value, onChange }: GameSelectorProps) {
+  const t = useTranslations('GameSelector');
+
+  const games: { id: Game | "all" }[] = [
+    { id: "all" },
+    { id: "ds1" },
+    { id: "ds2" },
+    { id: "ds3" },
+  ];
+
   return (
     <div className="flex items-center gap-1 p-1 bg-ds-surface-2 border border-ds-border rounded-sm">
-      {GAMES.map((g) => {
+      {games.map((g) => {
         const active = value === g.id;
         return (
           <Button
@@ -30,8 +33,8 @@ export function GameSelector({ value, onChange }: GameSelectorProps) {
               active ? "bg-ds-gold text-ds-bg" : "bg-transparent text-ds-muted hover:text-ds-gold-dim"
             )}
           >
-            <span className="hidden sm:inline">{g.label}</span>
-            <span className="sm:hidden">{g.short}</span>
+            <span className="hidden sm:inline">{t(g.id)}</span>
+            <span className="sm:hidden">{t(`short.${g.id}`)}</span>
           </Button>
         );
       })}

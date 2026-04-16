@@ -2,6 +2,7 @@
 
 import { useEntityPreview } from "@/src/hooks/useEntities";
 import type { Game } from "@/src/schemas/schema";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 
 interface EntityItem {
@@ -19,12 +20,6 @@ interface EntityPreviewSectionProps {
   label: string;
   game?: Game;
 }
-
-const GAME_LABEL: Record<Game, string> = {
-  ds1: "Dark Souls",
-  ds2: "Dark Souls II",
-  ds3: "Dark Souls III",
-};
 
 function EntityItemCard({ item, type }: { item: EntityItem; type: string }) {
   const subtitle =
@@ -65,6 +60,7 @@ function SkeletonCard() {
 
 export function EntityPreviewSection({ type, label, game }: EntityPreviewSectionProps) {
   const state = useEntityPreview<EntityItem>(type, game);
+  const t = useTranslations('EntityPreview');
 
   const items =
     state.status === "success" ? state.data.data : [];
@@ -85,7 +81,7 @@ export function EntityPreviewSection({ type, label, game }: EntityPreviewSection
             href={`/${type}${game ? `?game=${game}` : ""}`}
             className="text-xs tracking-widest uppercase transition-colors duration-200 font-display text-ds-muted hover:text-ds-gold-dim"
           >
-            View all {total} →
+            {t('viewAll', { count: total })}
           </Link>
         )}
       </div>
@@ -99,7 +95,7 @@ export function EntityPreviewSection({ type, label, game }: EntityPreviewSection
         }
         {state.status === "error" && (
           <p className="text-xs col-span-full font-display text-ds-muted">
-            Praise the Sun — mas algo falhou ao carregar. Tente novamente.
+            {t('error')}
           </p>
         )}
         {items.map((item) => (
@@ -108,4 +104,4 @@ export function EntityPreviewSection({ type, label, game }: EntityPreviewSection
       </div>
     </section>
   );
-}
+}
