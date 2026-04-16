@@ -1,4 +1,7 @@
+"use client";
+
 import { HugeiconsIcon, IconSvgElement } from "@hugeicons/react";
+import { useTranslations } from "next-intl";
 
 interface StatCardProps {
   label: string;
@@ -8,6 +11,8 @@ interface StatCardProps {
 }
 
 export function StatCard({ label, count, icon: Icon, href }: StatCardProps) {
+  const t = useTranslations('StatCard');
+
   return (
     <a
       href={href}
@@ -25,7 +30,7 @@ export function StatCard({ label, count, icon: Icon, href }: StatCardProps) {
       </div>
 
       <div className="text-xs tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-display text-ds-gold-dim">
-        Explore →
+        {t('explore')}
       </div>
     </a>
   );

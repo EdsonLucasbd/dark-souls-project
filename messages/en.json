@@ -1,0 +1,39 @@
+{
+  "HomePage": {
+    "title": "Dark Souls",
+    "subtitle": "The Souls Compendium",
+    "description": "A compendium of knowledge from across the trilogy — bosses, weapons, locations and souls.",
+    "stats": {
+      "bosses": "{count} bosses",
+      "weapons": "{count} weapons",
+      "locations": "{count} locations",
+      "npcs": "{count} npcs"
+    },
+    "footer": "May the flames guide thee"
+  },
+  "Common": {
+    "bosses": "Bosses",
+    "weapons": "Weapons",
+    "locations": "Locations",
+    "npcs": "NPCs"
+  },
+  "StatCard": {
+    "explore": "Explore →"
+  },
+  "GameSelector": {
+    "all": "All Games",
+    "ds1": "Dark Souls",
+    "ds2": "Dark Souls II",
+    "ds3": "Dark Souls III",
+    "short": {
+      "all": "ALL",
+      "ds1": "DS I",
+      "ds2": "DS II",
+      "ds3": "DS III"
+    }
+  },
+  "EntityPreview": {
+    "viewAll": "View all {count} →",
+    "error": "Praise the Sun — but something failed while loading. Try again."
+  }
+}

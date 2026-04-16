@@ -1,0 +1,39 @@
+{
+  "HomePage": {
+    "title": "Dark Souls",
+    "subtitle": "O Compêndio das Almas",
+    "description": "Um compêndio de conhecimento de toda a trilogia — chefes, armas, localizações e almas.",
+    "stats": {
+      "bosses": "{count} chefes",
+      "weapons": "{count} armas",
+      "locations": "{count} locais",
+      "npcs": "{count} npcs"
+    },
+    "footer": "Que as chamas te guiem"
+  },
+  "Common": {
+    "bosses": "Chefes",
+    "weapons": "Armas",
+    "locations": "Locais",
+    "npcs": "NPCs"
+  },
+  "StatCard": {
+    "explore": "Explorar →"
+  },
+  "GameSelector": {
+    "all": "Todos os Jogos",
+    "ds1": "Dark Souls",
+    "ds2": "Dark Souls II",
+    "ds3": "Dark Souls III",
+    "short": {
+      "all": "TUDO",
+      "ds1": "DS I",
+      "ds2": "DS II",
+      "ds3": "DS III"
+    }
+  },
+  "EntityPreview": {
+    "viewAll": "Ver todos {count} →",
+    "error": "Praise the Sun — mas algo falhou ao carregar. Tente novamente."
+  }
+}
