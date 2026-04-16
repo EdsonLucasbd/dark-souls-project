@@ -109,9 +109,21 @@ const seedBosses = () =>
     getLinks: (game) => GAME_CATEGORIES[game].bosses,
     scrape: scrapeBossPage,
     insert: (item) =>
-      db.insert(bosses).values(item).onConflictDoUpdate({
+      db.insert(bosses).values({
+        ...item,
+        nameEn: item.name,
+        locationEn: item.location,
+        descriptionEn: item.description,
+        loreEn: item.lore
+      }).onConflictDoUpdate({
         target: bosses.slug,
-        set: { ...item },
+        set: { 
+          ...item,
+          nameEn: item.name,
+          locationEn: item.location,
+          descriptionEn: item.description,
+          loreEn: item.lore
+        },
       }).then(),
   });
 
@@ -122,9 +134,21 @@ const seedWeapons = () =>
     getLinks: (game) => GAME_CATEGORIES[game].weapons,
     scrape: scrapeWeaponPage,
     insert: (item) =>
-      db.insert(weapons).values(item).onConflictDoUpdate({
+      db.insert(weapons).values({
+        ...item,
+        nameEn: item.name,
+        weaponTypeEn: item.weaponType,
+        attackTypeEn: item.attackType,
+        descriptionEn: item.description
+      }).onConflictDoUpdate({
         target: weapons.slug,
-        set: { ...item },
+        set: { 
+          ...item,
+          nameEn: item.name,
+          weaponTypeEn: item.weaponType,
+          attackTypeEn: item.attackType,
+          descriptionEn: item.description
+        },
       }).then(),
   });
 
@@ -135,9 +159,19 @@ const seedLocations = () =>
     getLinks: (game) => GAME_CATEGORIES[game].locations,
     scrape: scrapeLocationPage,
     insert: (item) =>
-      db.insert(locations).values(item).onConflictDoUpdate({
+      db.insert(locations).values({
+        ...item,
+        nameEn: item.name,
+        descriptionEn: item.description,
+        loreEn: item.lore
+      }).onConflictDoUpdate({
         target: locations.slug,
-        set: { ...item },
+        set: { 
+          ...item,
+          nameEn: item.name,
+          descriptionEn: item.description,
+          loreEn: item.lore
+        },
       }).then(),
   });
 
@@ -148,9 +182,21 @@ const seedNpcs = () =>
     getLinks: (game) => GAME_CATEGORIES[game].npcs,
     scrape: scrapeNpcPage,
     insert: (item) =>
-      db.insert(npcs).values(item).onConflictDoUpdate({
+      db.insert(npcs).values({
+        ...item,
+        nameEn: item.name,
+        locationEn: item.location,
+        descriptionEn: item.description,
+        loreEn: item.lore
+      }).onConflictDoUpdate({
         target: npcs.slug,
-        set: { ...item },
+        set: { 
+          ...item,
+          nameEn: item.name,
+          locationEn: item.location,
+          descriptionEn: item.description,
+          loreEn: item.lore
+        },
       }).then(),
   });
 

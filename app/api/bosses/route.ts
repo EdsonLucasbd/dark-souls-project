@@ -1,4 +1,4 @@
-import { badRequest, ok, paginate, parseListQuery, serverError } from "@/lib/api";
+import { badRequest, localizeEntity, ok, paginate, parseListQuery, serverError } from "@/lib/api";
 import { db } from "@/src/db";
 import { bosses } from "@/src/db/schema";
 import type { Game } from "@/src/schemas/schema";
@@ -13,12 +13,20 @@ export async function GET(req: NextRequest) {
     const query = parseListQuery(req.url);
     if (!query) return badRequest("Parâmetros inválidos.");
 
-    const { page, limit, game, search } = query;
+    const { page, limit, game, search, lang } = query;
     const { offset, meta } = paginate(page, limit);
 
     const filters: SQL[] = [];
     if (game) filters.push(eq(bosses.game, game as Game));
-    if (search) filters.push(like(bosses.name, `%${search}%`));
+    
+    // Search in current language column if possible
+    if (search) {
+      if (lang === "pt") {
+        filters.push(like(bosses.namePt, `%${search}%`));
+      } else {
+        filters.push(like(bosses.nameEn, `%${search}%`));
+      }
+    }
 
     const where = filters.length > 0 ? and(...filters) : undefined;
 
@@ -35,8 +43,11 @@ export async function GET(req: NextRequest) {
         .where(where),
     ]);
 
-    return ok(data, meta(total));
-  } catch {
+    const localizedData = data.map(item => localizeEntity(item, lang));
+
+    return ok(localizedData, meta(total));
+  } catch (err) {
+    console.error(`[api/bosses] Error:`, err);
     return serverError();
   }
 }
