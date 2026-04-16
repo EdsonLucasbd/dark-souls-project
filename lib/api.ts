@@ -15,6 +15,7 @@ export const PaginationSchema = z.object({
 export const ListQuerySchema = PaginationSchema.extend({
   game: GameQuerySchema,
   search: z.string().optional(),
+  lang: z.enum(["en", "pt"]).default("pt"),
 });
 
 export type ListQuery = z.infer<typeof ListQuerySchema>;
@@ -51,6 +52,7 @@ export function parseListQuery(url: string): ListQuery | null {
     limit: searchParams.get("limit") ?? 20,
     game: searchParams.get("game") ?? undefined,
     search: searchParams.get("search") ?? undefined,
+    lang: searchParams.get("lang") ?? "pt",
   };
 
   const parsed = ListQuerySchema.safeParse(raw);
@@ -71,4 +73,27 @@ export function paginate(page: number, limit: number) {
       totalPages: Math.ceil(total / limit),
     }),
   };
+}
+
+// ------------------------------------------------------------------ //
+// Localization helper                                                 //
+// ------------------------------------------------------------------ //
+
+export function localizeEntity<T extends Record<string, any>>(item: T, lang: "en" | "pt"): T {
+  const localized = { ...item };
+
+  const fields = ["name", "description", "lore", "location", "weaponType", "attackType"];
+
+  for (const field of fields) {
+    const enKey = `${field}En`;
+    const ptKey = `${field}Pt`;
+
+    if (lang === "pt") {
+      localized[field as keyof T] = item[ptKey] ?? item[enKey] ?? item[field];
+    } else {
+      localized[field as keyof T] = item[enKey] ?? item[field];
+    }
+  }
+
+  return localized;
 }

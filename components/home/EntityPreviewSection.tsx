@@ -3,7 +3,7 @@
 import { useEntityPreview } from "@/src/hooks/useEntities";
 import type { Game } from "@/src/schemas/schema";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
+import { Link } from "@/src/i18n/routing";
 
 interface EntityItem {
   slug: string;

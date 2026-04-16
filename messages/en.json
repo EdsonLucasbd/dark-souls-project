@@ -35,5 +35,28 @@
   "EntityPreview": {
     "viewAll": "View all {count} →",
     "error": "Praise the Sun — but something failed while loading. Try again."
+  },
+  "NpcsPage": {
+    "hero": {
+      "title": "Characters",
+      "subtitle": "Friends, Traitors and Lost Souls",
+      "description": "Travelers crossing your path across the varied realms of Dark Souls. Each holds their own story and purpose."
+    },
+    "filters": {
+      "search_placeholder": "Search by NPC name...",
+      "filter_by_game": "Filter by game:"
+    },
+    "card": {
+      "hostile": "Hostile",
+      "no_description": "A mysterious traveler with few records.",
+      "view_details": "View details"
+    },
+    "list": {
+      "no_results": "No NPCs found. Perhaps they have gone Hollow.",
+      "clear_search": "Clear search",
+      "error_loading": "Failed to summon the records. Try again.",
+      "showing_count": "Showing {count} characters"
+    }
   }
 }
+

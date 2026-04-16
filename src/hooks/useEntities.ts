@@ -1,5 +1,6 @@
 "use client";
 
+import { useLocale } from "next-intl";
 import { useMemo } from "react";
 import type { Game } from "../schemas/schema";
 import { useApi, type PaginatedResponse } from "./useApi";
@@ -15,6 +16,7 @@ interface UseEntitiesOptions {
 }
 
 export function useEntities<T>(type: EntityType, options: UseEntitiesOptions = {}) {
+  const locale = useLocale();
   const { game, search, page = 1, limit = 20, enabled = true } = options;
 
   const url = useMemo(() => {
@@ -23,11 +25,12 @@ export function useEntities<T>(type: EntityType, options: UseEntitiesOptions = {
     const params = new URLSearchParams();
     params.set("page", String(page));
     params.set("limit", String(limit));
+    params.set("lang", locale);
     if (game) params.set("game", game);
     if (search) params.set("search", search);
 
     return `/api/${type}?${params.toString()}`;
-  }, [type, game, search, page, limit, enabled]);
+  }, [type, game, search, page, limit, enabled, locale]);
 
   return useApi<PaginatedResponse<T>>(url);
 }

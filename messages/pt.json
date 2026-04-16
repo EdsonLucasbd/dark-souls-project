@@ -35,5 +35,28 @@
   "EntityPreview": {
     "viewAll": "Ver todos {count} →",
     "error": "Praise the Sun — mas algo falhou ao carregar. Tente novamente."
+  },
+  "NpcsPage": {
+    "hero": {
+      "title": "Personagens",
+      "subtitle": "Amigos, Traidores e Almodas Perdidas",
+      "description": "Viajantes que cruzam seu caminho nos diversos reinos de Dark Souls. Cada um guarda sua própria história e propósito."
+    },
+    "filters": {
+      "search_placeholder": "Buscar pelo nome do NPC...",
+      "filter_by_game": "Filtrar por jogo:"
+    },
+    "card": {
+      "hostile": "Hostil",
+      "no_description": "Um viajante misterioso sem muitos registros.",
+      "view_details": "Ver mais"
+    },
+    "list": {
+      "no_results": "Nenhum NPC encontrado. Talvez ele tenha se tornado um Vazio.",
+      "clear_search": "Limpar busca",
+      "error_loading": "Falha ao invocar os registros. Tente novamente.",
+      "showing_count": "Mostrando {count} personagens"
+    }
   }
 }
+
