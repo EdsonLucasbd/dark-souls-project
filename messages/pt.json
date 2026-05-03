@@ -56,6 +56,115 @@
       "clear_search": "Limpar busca",
       "error_loading": "Falha ao invocar os registros. Tente novamente.",
       "showing_count": "Mostrando {count} personagens"
+    },
+    "details": {
+      "back_to_list": "Voltar para a lista",
+      "location": "Localização",
+      "status": "Estado",
+      "hostile": "Hostil",
+      "friendly": "Amigável",
+      "lore_title": "História e Encontros",
+      "wiki_link": "Ver na Wiki oficial",
+      "not_found": "O NPC que você procura partiu para outras terras ou se tornou um Vazio."
+    }
+  },
+  "BossesPage": {
+    "hero": {
+      "title": "Grandes Chefes",
+      "subtitle": "Portadores de Grandes Almas",
+      "description": "Lendas que barram seu caminho. Cada vitória é um passo em direção ao destino ou à danação."
+    },
+    "filters": {
+      "search_placeholder": "Buscar pelo nome do chefe...",
+      "filter_by_game": "Filtrar por jogo:"
+    },
+    "card": {
+      "optional": "Opcional",
+      "no_description": "Um ser temível sem muitos registros.",
+      "view_details": "Ver mais"
+    },
+    "list": {
+      "no_results": "Nenhum chefe encontrado. A chama deve estar se apagando.",
+      "clear_search": "Limpar busca",
+      "error_loading": "Falha ao invocar os registros. Tente novamente.",
+      "showing_count": "Mostrando {count} chefes"
+    },
+    "details": {
+      "back_to_list": "Voltar para a lista",
+      "location": "Localização",
+      "optional": "Opcional",
+      "souls": "Almas",
+      "health": "Pontos de Vida",
+      "lore_title": "História e Lendas",
+      "wiki_link": "Ver na Wiki oficial",
+      "not_found": "O chefe que você procura não foi encontrado nos registros.",
+      "mandatory": "Obrigatório"
+    }
+  },
+  "LocationsPage": {
+    "hero": {
+      "title": "Reinos e Terras",
+      "subtitle": "Onde o Tempo é Estático",
+      "description": "Das profundezas de Blighttown aos picos de Anor Londo. Explore os marcos que moldaram o mundo."
+    },
+    "filters": {
+      "search_placeholder": "Buscar pelo nome do local...",
+      "filter_by_game": "Filtrar por jogo:"
+    },
+    "card": {
+      "view_details": "Ver mais",
+      "no_description": "Um local misterioso envolto em névoa."
+    },
+    "list": {
+      "no_results": "Nenhum local encontrado. O caminho está bloqueado.",
+      "clear_search": "Limpar busca",
+      "error_loading": "Falha ao invocar os registros. Tente novamente.",
+      "showing_count": "Mostrando {count} locais"
+    },
+    "details": {
+      "back_to_list": "Voltar para a lista",
+      "lore_title": "História e Segredos",
+      "wiki_link": "Ver na Wiki oficial",
+      "not_found": "O local que você procura foi perdido no tempo."
+    }
+  },
+  "WeaponsPage": {
+    "hero": {
+      "title": "Arsenal de Guerra",
+      "subtitle": "Aço, Magia e Sangue",
+      "description": "De simples adagas a espadas colossais forjadas em almas. Encontre a ferramenta certa para seu destino."
+    },
+    "filters": {
+      "search_placeholder": "Buscar pelo nome da arma...",
+      "filter_by_game": "Filtrar por jogo:"
+    },
+    "card": {
+      "view_details": "Ver mais",
+      "no_description": "Uma arma antiga de origem desconhecida."
+    },
+    "list": {
+      "no_results": "Nenhuma arma encontrada. Você está desarmado.",
+      "clear_search": "Limpar busca",
+      "error_loading": "Falha ao invocar os registros. Tente novamente.",
+      "showing_count": "Mostrando {count} armas"
+    },
+    "details": {
+      "back_to_list": "Voltar para a lista",
+      "damage_title": "Poder de Ataque",
+      "requirements_title": "Atributos Necessários",
+      "scaling_title": "Bônus de Atributo",
+      "physical": "Físico",
+      "magic": "Mágico",
+      "fire": "Fogo",
+      "lightning": "Raio",
+      "strength": "Força",
+      "dexterity": "Destreza",
+      "intelligence": "Inteligência",
+      "faith": "Fé",
+      "type": "Tipo de Arma",
+      "attack_type": "Tipo de Ataque",
+      "wiki_link": "Ver na Wiki oficial",
+      "not_found": "A arma que você procura não foi encontrada no arsenal."
     }
   }
 }

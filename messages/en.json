@@ -56,6 +56,115 @@
       "clear_search": "Clear search",
       "error_loading": "Failed to summon the records. Try again.",
       "showing_count": "Showing {count} characters"
+    },
+    "details": {
+      "back_to_list": "Back to list",
+      "location": "Location",
+      "status": "Status",
+      "hostile": "Hostile",
+      "friendly": "Friendly",
+      "lore_title": "Lore & Encounters",
+      "wiki_link": "View on Official Wiki",
+      "not_found": "The NPC you are looking for has departed to other lands or has gone Hollow."
+    }
+  },
+  "BossesPage": {
+    "hero": {
+      "title": "Great Bosses",
+      "subtitle": "Bearers of Great Souls",
+      "description": "Legends that bar your way. Each victory is a step toward destiny or damnation."
+    },
+    "filters": {
+      "search_placeholder": "Search by boss name...",
+      "filter_by_game": "Filter by game:"
+    },
+    "card": {
+      "optional": "Optional",
+      "no_description": "A fearsome being with few records.",
+      "view_details": "View details"
+    },
+    "list": {
+      "no_results": "No bosses found. The flame must be fading.",
+      "clear_search": "Clear search",
+      "error_loading": "Failed to summon the records. Try again.",
+      "showing_count": "Showing {count} bosses"
+    },
+    "details": {
+      "back_to_list": "Back to list",
+      "location": "Location",
+      "optional": "Optional",
+      "souls": "Souls",
+      "health": "Health Points",
+      "lore_title": "Lore & Legends",
+      "wiki_link": "View on Official Wiki",
+      "not_found": "The boss you are looking for was not found in the records.",
+      "mandatory": "Mandatory"
+    }
+  },
+  "LocationsPage": {
+    "hero": {
+      "title": "Realms & Lands",
+      "subtitle": "Where Time is Stagnant",
+      "description": "From the depths of Blighttown to the peaks of Anor Londo. Explore the landmarks that shaped the world."
+    },
+    "filters": {
+      "search_placeholder": "Search by location name...",
+      "filter_by_game": "Filter by game:"
+    },
+    "card": {
+      "view_details": "View more",
+      "no_description": "A mysterious location shrouded in mist."
+    },
+    "list": {
+      "no_results": "No locations found. The path is blocked.",
+      "clear_search": "Clear search",
+      "error_loading": "Failed to summon the records. Try again.",
+      "showing_count": "Showing {count} locations"
+    },
+    "details": {
+      "back_to_list": "Back to list",
+      "lore_title": "Lore & Secrets",
+      "wiki_link": "View on Official Wiki",
+      "not_found": "The location you are looking for was lost in time."
+    }
+  },
+  "WeaponsPage": {
+    "hero": {
+      "title": "Arsenal of War",
+      "subtitle": "Steel, Magic and Blood",
+      "description": "From simple daggers to colossal swords forged from souls. Find the right tool for your destiny."
+    },
+    "filters": {
+      "search_placeholder": "Search by weapon name...",
+      "filter_by_game": "Filter by game:"
+    },
+    "card": {
+      "view_details": "View more",
+      "no_description": "An ancient weapon of unknown origin."
+    },
+    "list": {
+      "no_results": "No weapons found. You are unarmed.",
+      "clear_search": "Clear search",
+      "error_loading": "Failed to summon the records. Try again.",
+      "showing_count": "Showing {count} weapons"
+    },
+    "details": {
+      "back_to_list": "Back to list",
+      "damage_title": "Attack Power",
+      "requirements_title": "Required Attributes",
+      "scaling_title": "Attribute Bonus",
+      "physical": "Physical",
+      "magic": "Magic",
+      "fire": "Fire",
+      "lightning": "Lightning",
+      "strength": "Strength",
+      "dexterity": "Dexterity",
+      "intelligence": "Intelligence",
+      "faith": "Faith",
+      "type": "Weapon Type",
+      "attack_type": "Attack Type",
+      "wiki_link": "View on Official Wiki",
+      "not_found": "The weapon you are looking for was not found in the arsenal."
     }
   }
 }
