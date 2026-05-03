@@ -15,7 +15,8 @@
     "bosses": "Chefes",
     "weapons": "Armas",
     "locations": "Locais",
-    "npcs": "NPCs"
+    "npcs": "NPCs",
+    "home_button": "Retornar ao Início"
   },
   "StatCard": {
     "explore": "Explorar →"
@@ -98,7 +99,9 @@
       "lore_title": "História e Lendas",
       "wiki_link": "Ver na Wiki oficial",
       "not_found": "O chefe que você procura não foi encontrado nos registros.",
-      "mandatory": "Obrigatório"
+      "mandatory": "Obrigatório",
+      "sidebar_title": "Informações de Combate",
+      "unknown_value": "???"
     }
   },
   "LocationsPage": {
@@ -125,7 +128,9 @@
       "back_to_list": "Voltar para a lista",
       "lore_title": "História e Segredos",
       "wiki_link": "Ver na Wiki oficial",
-      "not_found": "O local que você procura foi perdido no tempo."
+      "not_found": "O local que você procura foi perdido no tempo.",
+      "sidebar_title": "Informações da Terra",
+      "unknown_value": "???"
     }
   },
   "WeaponsPage": {
@@ -164,7 +169,9 @@
       "type": "Tipo de Arma",
       "attack_type": "Tipo de Ataque",
       "wiki_link": "Ver na Wiki oficial",
-      "not_found": "A arma que você procura não foi encontrada no arsenal."
+      "not_found": "A arma que você procura não foi encontrada no arsenal.",
+      "sidebar_title": "Informações Técnicas",
+      "unknown_value": "???"
     }
   }
 }

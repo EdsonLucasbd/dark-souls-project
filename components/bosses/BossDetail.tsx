@@ -143,7 +143,7 @@ export function BossDetail() {
         <div className="flex flex-col gap-6 animate-in fade-in slide-in-from-right-4 duration-1000">
           <div className="rounded-sm border border-ds-border bg-ds-surface/30 p-6 flex flex-col gap-6">
             <h3 className="text-xs font-display text-ds-gold-dim uppercase tracking-[0.3em] border-b border-ds-border pb-4">
-              Informações de Combate
+              {t("details.sidebar_title")}
             </h3>
 
             <div className="flex flex-col gap-5">
@@ -154,7 +154,7 @@ export function BossDetail() {
                   {t("details.location")}
                 </div>
                 <span className="text-sm text-ds-text font-lore pl-5">
-                  {boss.location || "???"}
+                  {boss.location || t("details.unknown_value")}
                 </span>
               </div>
 
@@ -199,7 +199,7 @@ export function BossDetail() {
           </div>
 
           {/* Decorative visual in sidebar */}
-          <div className="relative h-40 rounded-sm overflow-hidden border border-ds-border-2 opacity-40 group grayscale hover:grayscale-0 transition-all duration-1000">
+          {/* <div className="relative h-40 rounded-sm overflow-hidden border border-ds-border-2 opacity-40 group grayscale hover:grayscale-0 transition-all duration-1000">
             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-10" />
             <Image
               src="https://images.unsplash.com/photo-1519074063912-ad25b5ce4970?q=80&w=1974&auto=format&fit=crop"
@@ -212,7 +212,7 @@ export function BossDetail() {
                 You Died
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

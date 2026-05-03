@@ -15,7 +15,8 @@
     "bosses": "Bosses",
     "weapons": "Weapons",
     "locations": "Locations",
-    "npcs": "NPCs"
+    "npcs": "NPCs",
+    "home_button": "Return to Home"
   },
   "StatCard": {
     "explore": "Explore →"
@@ -98,7 +99,9 @@
       "lore_title": "Lore & Legends",
       "wiki_link": "View on Official Wiki",
       "not_found": "The boss you are looking for was not found in the records.",
-      "mandatory": "Mandatory"
+      "mandatory": "Mandatory",
+      "sidebar_title": "Combat Info",
+      "unknown_value": "???"
     }
   },
   "LocationsPage": {
@@ -125,7 +128,9 @@
       "back_to_list": "Back to list",
       "lore_title": "Lore & Secrets",
       "wiki_link": "View on Official Wiki",
-      "not_found": "The location you are looking for was lost in time."
+      "not_found": "The location you are looking for was lost in time.",
+      "sidebar_title": "Land Info",
+      "unknown_value": "???"
     }
   },
   "WeaponsPage": {
@@ -164,7 +169,9 @@
       "type": "Weapon Type",
       "attack_type": "Attack Type",
       "wiki_link": "View on Official Wiki",
-      "not_found": "The weapon you are looking for was not found in the arsenal."
+      "not_found": "The weapon you are looking for was not found in the arsenal.",
+      "sidebar_title": "Technical Info",
+      "unknown_value": "???"
     }
   }
 }

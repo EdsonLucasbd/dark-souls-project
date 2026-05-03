@@ -151,7 +151,7 @@ export function WeaponDetail() {
         <div className="flex flex-col gap-6 animate-in fade-in slide-in-from-right-4 duration-1000">
           <div className="rounded-sm border border-ds-border bg-ds-surface/30 p-6 flex flex-col gap-6">
             <h3 className="text-xs font-display text-ds-gold-dim uppercase tracking-[0.3em] border-b border-ds-border pb-4">
-              Informações Técnicas
+              {t("details.sidebar_title")}
             </h3>
 
             <div className="flex flex-col gap-5">
@@ -182,7 +182,7 @@ export function WeaponDetail() {
           </div>
 
           {/* Decorative visual in sidebar */}
-          <div className="relative h-40 rounded-sm overflow-hidden border border-ds-border-2 opacity-40 group grayscale hover:grayscale-0 transition-all duration-1000">
+          {/* <div className="relative h-40 rounded-sm overflow-hidden border border-ds-border-2 opacity-40 group grayscale hover:grayscale-0 transition-all duration-1000">
             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-10" />
             <Image
               src="https://images.unsplash.com/photo-1590424600645-ec7570e3049b?q=80&w=2070&auto=format&fit=crop"
@@ -195,7 +195,7 @@ export function WeaponDetail() {
                 Prepare to Die
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
